@@ -69,7 +69,12 @@ namespace DataExam1
                     Console.WriteLine("No defences avilable");
                 else
                 {
-                    Console.WriteLine($"Threat: {threats.ThreatType} Defence: " + String.Join(", ",defences));
+                    Console.WriteLine($"Threat: {threats.ThreatType} \nDefence:");
+                    foreach (string defence in defences)
+                    {
+                        Console.WriteLine(defence);
+                        Thread.Sleep(2000);
+                    }  
                 }           
             } 
         }
@@ -78,7 +83,6 @@ namespace DataExam1
         {
             foreach (Threats threat in threats)
             {
-                Thread.Sleep(2000);
                 ActiveDefence(tree, threat);
             }
                 

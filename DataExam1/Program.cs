@@ -14,7 +14,7 @@
             DefenceStrategiesBST defenceStrategiesBST = new DefenceStrategiesBST();
             defenceStrategiesBST.InsertList(DefencesList);
 
-            
+
             //print the tree
             Console.WriteLine("print the tree");
             Thread.Sleep(4000);
@@ -24,9 +24,9 @@
             Console.WriteLine("Import threats from json file");
             Thread.Sleep(4000);
             List<Threats>? Threatslist = Utilities
-                .ReadFromJson<List<Threats>>("defenceStrategiesBalanced.json");
+                .ReadFromJson<List<Threats>>("threats.json");
 
-            //Active the the defences
+            // Active the the defences
             Utilities.ActiveDefenceLoop(defenceStrategiesBST, Threatslist);
 
 
